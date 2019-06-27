@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bhugo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/26 16:23:50 by bhugo             #+#    #+#             */
-/*   Updated: 2019/06/27 20:19:41 by bhugo            ###   ########.fr       */
+/*   Created: 2019/06/27 17:53:11 by bhugo             #+#    #+#             */
+/*   Updated: 2019/06/27 18:20:50 by bhugo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-int		get_next_line(const int fd, char **line)
-{
-	static t_list	*begin_tail;
-	t_list				*tail;
-	
-	if (fd < 0 || fd > 10240 || *line == NULL)
-		return (-1);
-	if (begin_tail == NULL)
-	{
-		if ((tail = ft_memalloc(sizeof(*tail))) == NULL)
-				return (-1);
+# define BUFFSIZE 42
+# include "./libft/libft.h"
+# include <sys/types.h>
+# include <sys/uio.h>
 
-
-
-
-	}
-}
+#endif
